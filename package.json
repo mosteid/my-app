@@ -1,0 +1,23 @@
+{
+  "name": "mostafa-board",
+  "productName": "منصة الأستاذ مصطفى",
+  "version": "1.0.0",
+  "description": "منصة الأستاذ مصطفى عيد الصافي - السبورة التفاعلية",
+  "main": "main.js",
+  "author": "Mostafa Eid El-Safy",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.mostafa.board",
+    "productName": "منصة الأستاذ مصطفى",
+    "files": ["main.js", "index.html"],
+    "win": { "target": ["nsis", "portable"] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true }
+  }
+}
